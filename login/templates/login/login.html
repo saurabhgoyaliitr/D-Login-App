@@ -1,0 +1,36 @@
+
+
+
+
+
+  <form action = "" method = "POST"  >
+{% csrf_token %}
+
+
+
+<input type="text" name ="username" placeholder="username"  >
+<input type="password" name = "password" placeholder="password">
+
+{% if error %} {{ error }} {% endif %} 
+
+<table> <tr> <td><input type ="submit" value="SignIn" name ="submit" style="width:50px"> </td> </tr>
+</table> 
+</form> 
+
+ <form action ="register/" method = "POST"      >
+ 
+{% csrf_token %}
+
+<input type = "text" name = "username" placeholder = "username" > <br>  
+<input type = "password" name = "password" placeholder = "password" > <br>  
+<input type = "text" name = "firstname" placeholder = "First Name" > <br>  
+<input type = "text" name ="lastname" placeholder = "Last Name" > <br>  
+<input type = "text" name = "email" placeholder = "Email" > <br> 
+
+
+<input type="submit" value = "signup"  name="register-button"   />
+
+</form>
+
+
+
