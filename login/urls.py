@@ -12,7 +12,8 @@ urlpatterns = patterns('',
    url ( r'^register/$' , views.register) , 
    url ( r'^logout/$' , views.logoutu) , 
    url  ( r'^change/$' , views.change) , 
-
+   url ( r'^upload/profilepicture/$' , views.listi ) , 
+ 
 )
  
 

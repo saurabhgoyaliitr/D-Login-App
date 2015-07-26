@@ -2,9 +2,10 @@
 <form action = "" method = "POST" > 
 {% csrf_token %}
 Enter New Password : <br > 
-<input type = "password" name = "password" > <br> 
+<input type = "password" name = "password1" > <br> 
 Confirm Password : <br > 
 <input type = "password" name = "password2" > 
 
 <input type = "submit" value = "Done" >
+{{ error }} 
 </form > 

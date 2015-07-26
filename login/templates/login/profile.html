@@ -4,7 +4,99 @@ Welcome {{ request.user.first_name }} {{ request.user.last_name }}
 <br>
 
 
+  
 
-<a href = '/login/logout/' > LogOut </a>
+		<div id="profile">
+		<img src="/media/{{ Pro.profile }}" style="height:175px;width:15%;">
+		
+		</div>
+		
+		<div>
+		
+		<form action="/login/upload/profilepicture/" method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+			<input id="id_image2" type="file" name="profile">
+			<button type="submit" style="height:20px;border-radius:10px;">
+			UPLOAD
+			</button>
+		</form>
+		</div>
+
+        <table>
+              
+		<tr><td>
+		Enrollment No. :
+		</td><td>
+		{{ Pro.enrollment }}
+		</td>
+		</tr>
+
+		<tr><td>
+		Branch : 
+		</td><td>
+		{{ Pro.branch }}
+		</td><tr/>
+		
+		<tr><td>
+		Gender : 
+		</td><td>
+		{{ Pro.gender }}
+		</td><tr/>
+		
+		<tr><td>
+		Date of Birth : 
+		</td><td>
+		{{ Pro.dob }}
+		</td><tr/>
+		
+		<tr><td>
+		Contact : 
+		</td><td>
+		{{ Pro.contact }}
+		</td><tr/>
+		
+		<tr><td>
+		Address : 
+		</td><td>
+		{{ Pro.address }}
+		</td><tr/>
+		
+		<tr><td>
+		About : 
+		</td><td>
+		{{ Pro.about }}
+		</td><tr/>
+
+
+
+		</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href = '/login/logout/' > LogOut </a><br> 
 
 <a href = '/login/change/' > Change Password </a>  

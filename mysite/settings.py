@@ -1,4 +1,4 @@
-"""
+""" 
 Django settings for mysite project.
 
 For more information on this file, see
@@ -80,7 +80,9 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 
 
+MEDIA_ROOT = os.path.join (BASE_DIR , 'media' ) 
 
+MEDIA_URL = '/media/' 
 
 
 
